@@ -4,7 +4,9 @@ package com.spring.SpringJdbc;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.spring.SpringJdbc.dao.StudentDao;
+import com.spring.SpringJdbc.entities.Student;
 
 @SpringBootApplication
 public class SpringJdbcApplication {
@@ -12,14 +14,13 @@ public class SpringJdbcApplication {
 	public static void main(String[] args) {
 		System.out.println("My Application Started...");
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/SpringJdbc/Config.xml");
-		JdbcTemplate template = context.getBean("jdbcTemplate",JdbcTemplate.class);
-		
-		//Insert Query
-		String query = "insert into student(id,name,city) values(?,?,?)";
-		
-		//Execute query
-		int result = template.update(query, 333,"Raghav","Noida");
-		System.out.println("Number of records inserted "+result);
+		StudentDao studentDao = context.getBean("studentDaoImpl",StudentDao.class);
+		Student student = new Student(222,"Ankit","Chadigarh");
+		System.out.println("Number of records inserted "+studentDao.insert(student));
+		student.setId(222);
+		student.setName("Ankit Vashisth");
+		student.setCity("Faridabad");
+		System.out.println("Number of records updated "+studentDao.updateValues(student));
 		//SpringApplication.run(SpringJdbcApplication.class, args);
 	}
 
