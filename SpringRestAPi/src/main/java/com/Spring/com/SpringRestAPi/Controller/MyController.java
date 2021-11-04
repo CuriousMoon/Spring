@@ -64,7 +64,7 @@ public class MyController {
 	 * @return String 
 	 */
 	@PostMapping("/courses")
-	public String addCourse(@RequestBody Course newCourse)
+	public Course addCourse(@RequestBody Course newCourse)
 	{
 		return this.courseService.addCourse(newCourse);
 	}
@@ -76,7 +76,7 @@ public class MyController {
 	 * @return String
 	 */
 	@PutMapping("/courses")
-	public String updateCourse(@RequestBody Course course)
+	public Course updateCourse(@RequestBody Course course)
 	{
 		return this.courseService.updateCourse(course);
 	}

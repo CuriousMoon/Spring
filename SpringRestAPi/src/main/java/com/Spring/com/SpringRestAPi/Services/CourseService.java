@@ -8,7 +8,7 @@ public interface CourseService {
 	
 	public List<Course> getCourses();
 	public Course getCourse(long courseId);
-	public String addCourse(Course newCourse);
-	public String updateCourse(Course updateCourse);
-	public String deleteCourse(long courseId);
+	public Course addCourse(Course newCourse);
+	public Course updateCourse(Course updateCourse);
+	public void deleteCourse(long courseId);
 }
