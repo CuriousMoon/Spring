@@ -6,7 +6,7 @@ Created few apis to perform actions on the list of Courses present in database.
 
 
 
-## Documentation
+## Description
 
 + ### Home Page: "/home"
     - @Get method
