@@ -18,5 +18,7 @@
 		<property name="show_sql">true</property>
 		<mapping class="com.hibernate.hibernateLearning.Student"/>
 		<mapping class="com.hibernate.hibernateLearning.Address"/>
+		<mapping class="com.hibernate.hibernateLearning.Question"/>
+		<mapping class="com.hibernate.hibernateLearning.Answer"/>
 	</session-factory>
 </hibernate-configuration>
