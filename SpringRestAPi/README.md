@@ -26,11 +26,11 @@ Created few apis to perform actions on the list of Courses present in database.
 
 + ### Update Course: "/courses"
     - @Put method
-    - This endpoint is used to update any exsisting course. In request body send id, (updated) course name and (updated) course description. In response it returns the updated course. In response this return the appropriate response code.
+    - This endpoint is used to update any exsisting course. In request body send id, (updated) course name and (updated) course description. In response it returns the updated course.
 
 + ### Delete Course: "/courses/{courseId}"
     - @Delete method
-    - This endpoint is used to delete course with given course id
+    - This endpoint is used to delete course with given course id. In response this return the appropriate response code.
 
 
 ## Tech Stack
